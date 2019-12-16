@@ -1,7 +1,7 @@
 const db    = require('../config/db');
 const type  = db.Sequelize;
 
-let contatosModel = db.define('pessoas',{
+let holidaysModel = db.define('holidays',{
     id:{
         type: type.INTEGER,
         primaryKey: true
@@ -9,4 +9,4 @@ let contatosModel = db.define('pessoas',{
     Nome:type.STRING
 });
 
-module.exports = contatosModel;
+module.exports = holidaysModel;

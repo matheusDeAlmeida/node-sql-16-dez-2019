@@ -1,52 +1,52 @@
-const model = require('../models/pessoasModel');
+const model = require('../models/holidaysModel');
 
-function buscarPessoas(skip, limit){
+function findHolidays(skip, limit){
     return new Promise((resolve, reject) => {
         model.findAll({
             offset:skip,limit:limit
         }).then(res => {
             resolve(res);
         }).catch(err => {            
-            console.log(`erro ao buscar pessoas: ${err};`);
+            console.log(`erro ao buscar feriados: ${err};`);
             reject(err);
         })
     });
 }
 
-function insertPessoa(data){
+function insertHoliday(data){
     return new Promise((resolve, reject) =>{
         model.create(data).then(res => {
             resolve(res);
         }).catch(err => {
-            console.log(`erro ao inserir a pessoa: ${err};`);
+            console.log(`erro ao inserir o feriado: ${err};`);
             reject(err);
         })
     });
 }
 
-function updatePessoa(data){
+function updateHoliday(data){
     return new Promise((resolve, reject) =>{
         model.update(data, {
             where: { id:data.id }
         }).then(res => {
             resolve(res);
         }).catch(err => {
-            console.log(`erro ao editar a pessoa: ${err};`);
+            console.log(`erro ao editar o feriado: ${err};`);
             reject(err);
         })
     });
 }
 
-function deletePessoa(data){
+function deleteHoliday(data){
     return new Promise((resolve, reject) => {       
         model.destroy({where:{ id:data.id}}).then(res => {           
             resolve(res);
         }).catch(err => {            
-            console.log(`erro ao excluir a pessoa: ${err};`);
+            console.log(`erro ao excluir o feriado: ${err};`);
             reject(err);
         });
     });
 }
 
-module.exports = {buscarPessoas, insertPessoa, updatePessoa, deletePessoa};
+module.exports = {findHolidays, insertHoliday, updateHoliday, deleteHoliday};
 

@@ -1,10 +1,5 @@
-const pessoas  = require('./routerPessoas');
+const holidays  = require('./routerHolidays');
 
-const router = [pessoas];
+const router = [holidays];
 
 module.exports = router;
-
-
-
-
-
