@@ -1,8 +1,8 @@
 const pessoas  = require('./routerPessoas');
 
-const router = [pessoas];
+export const router = [pessoas];
 
-module.exports = router;
+//module.exports = router;
 
 
 

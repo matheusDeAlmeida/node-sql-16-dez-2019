@@ -1,8 +1,8 @@
-import * as db from '../config/db'
-//const db    = require('../config/db');
-const type  = db.sequelize;
+//https://sequelize.org/master/manual/typescript.html
+import {sequelize} from '../config/db'
+const type  = sequelize;
 
-export const contatosModel = db.define('pessoas',{
+export const contatosModel = sequelize.define('pessoas',{
     id:{
         type: type.INTEGER,
         primaryKey: true

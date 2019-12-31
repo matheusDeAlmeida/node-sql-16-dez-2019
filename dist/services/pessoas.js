@@ -1,7 +1,10 @@
-const model = require('../models/pessoasModel');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//const model = require('../models/pessoasModel');
+const pessoasModel_1 = require("../models/pessoasModel");
 function buscarPessoas(skip, limit) {
     return new Promise((resolve, reject) => {
-        model.findAll({
+        pessoasModel_1.contatosModel.findAll({
             offset: skip, limit: limit
         }).then(res => {
             resolve(res);
@@ -13,7 +16,7 @@ function buscarPessoas(skip, limit) {
 }
 function insertPessoa(data) {
     return new Promise((resolve, reject) => {
-        model.create(data).then(res => {
+        pessoasModel_1.contatosModel.create(data).then(res => {
             resolve(res);
         }).catch(err => {
             console.log(`erro ao inserir a pessoa: ${err};`);
@@ -23,7 +26,7 @@ function insertPessoa(data) {
 }
 function updatePessoa(data) {
     return new Promise((resolve, reject) => {
-        model.update(data, {
+        pessoasModel_1.contatosModel.update(data, {
             where: { id: data.id }
         }).then(res => {
             resolve(res);
@@ -35,7 +38,7 @@ function updatePessoa(data) {
 }
 function deletePessoa(data) {
     return new Promise((resolve, reject) => {
-        model.destroy({ where: { id: data.id } }).then(res => {
+        pessoasModel_1.contatosModel.destroy({ where: { id: data.id } }).then(res => {
             resolve(res);
         }).catch(err => {
             console.log(`erro ao excluir a pessoa: ${err};`);

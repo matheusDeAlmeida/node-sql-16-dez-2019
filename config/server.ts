@@ -1,7 +1,7 @@
 import * as restify from 'restify'
 //import {restify} from 'restify'
 export const port      = 3000;
-export const server    = restify.createServer();
+export const b    = restify.createServer();
 
 server.use(restify.plugins.bodyParser({
     mapParams:true,

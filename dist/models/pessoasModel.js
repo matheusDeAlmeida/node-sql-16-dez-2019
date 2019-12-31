@@ -1,10 +1,13 @@
-const db = require('../config/db');
-const type = db.Sequelize;
-let contatosModel = db.define('pessoas', {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const db = require("../config/db");
+//const db    = require('../config/db');
+const type = db.sequelize;
+exports.contatosModel = db.define('pessoas', {
     id: {
         type: type.INTEGER,
         primaryKey: true
     },
     Nome: type.STRING
 });
-module.exports = contatosModel;
+//module.exports = contatosModel;

@@ -1,4 +1,5 @@
-import * as Sequelize from 'sequelize'
+import {Sequelize} from 'sequelize'
+//const type  = db.Sequelize;
 
 //criação do client conexão
 export const sequelize = new Sequelize('contatos', 'matheus', 'password', {

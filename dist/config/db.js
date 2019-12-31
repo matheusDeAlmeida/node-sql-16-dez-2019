@@ -1,6 +1,8 @@
-const Sequelize = require('sequelize');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Sequelize = require("sequelize");
 //criação do client conexão
-const sequelize = new Sequelize('contatos', 'matheus', 'password', {
+exports.sequelize = new Sequelize('contatos', 'matheus', 'password', {
     host: "localhost",
     port: 3306,
     dialect: 'mysql',
@@ -8,4 +10,4 @@ const sequelize = new Sequelize('contatos', 'matheus', 'password', {
         timestamps: false
     }
 });
-module.exports = sequelize;
+//module.exports = sequelize;

@@ -1,6 +1,10 @@
-const router = require('../config/server').server;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+//import {fatorial} from '../config/server'
+const server_1 = require("../config/server");
+//const router   = require('../config/server').server;
 const service = require('../services/pessoas');
-router.get('/pessoas', (request, response, next) => {
+server_1.server.get('/pessoas', (request, response, next) => {
     service.buscarPessoas().then(data => {
         response.send(200, data);
     }).catch(err => {
