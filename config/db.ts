@@ -1,7 +1,7 @@
-const Sequelize = require('sequelize');
+import * as Sequelize from 'sequelize'
 
 //criação do client conexão
-const sequelize = new Sequelize('contatos', 'matheus', 'password', {
+export const sequelize = new Sequelize('contatos', 'matheus', 'password', {
     host:"localhost",
     port:3306,
     dialect:'mysql',
@@ -10,4 +10,4 @@ const sequelize = new Sequelize('contatos', 'matheus', 'password', {
     }
 })
 
-module.exports = sequelize;
+//module.exports = sequelize;

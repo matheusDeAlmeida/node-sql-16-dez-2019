@@ -13,5 +13,9 @@
     "mysql2": "^1.6.1",
     "restify": "^7.2.1",
     "sequelize": "^4.39.0"
+  },
+  "devDependencies": {
+    "@types/restify": "^8.4.2",
+    "@types/sequelize": "^4.28.8"
   }
 }

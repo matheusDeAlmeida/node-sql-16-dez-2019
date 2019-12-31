@@ -1,6 +1,7 @@
-const restify   = require('restify');
-const port      = 3000;
-const server    = restify.createServer();
+import * as restify from 'restify'
+//import {restify} from 'restify'
+export const port      = 3000;
+export const server    = restify.createServer();
 
 server.use(restify.plugins.bodyParser({
     mapParams:true,
@@ -8,4 +9,4 @@ server.use(restify.plugins.bodyParser({
     overrideParams: false
 }));
 
-module.exports = {server, port};
+//module.exports = {server, port};
