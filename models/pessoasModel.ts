@@ -1,13 +1,11 @@
 //https://sequelize.org/master/manual/typescript.html
-import {sequelize} from '../config/db'
-const type  = sequelize;
+import {db} from '../config/db'
+import { INTEGER, STRING } from 'sequelize'
 
-export const contatosModel = sequelize.define('pessoas',{
+export const contatosModel = db.define('pessoas',{
     id:{
-        type: type.INTEGER,
+        type: INTEGER,
         primaryKey: true
     },
-    Nome:type.STRING
-});
-
-//module.exports = contatosModel;
+    Nome: STRING
+})
