@@ -1,5 +1,6 @@
-const db    = require('../config/db');
-const type  = db.Sequelize;
+import * as db from '../config/db'
+//const db    = require('../config/db');
+const type  = db.sequelize;
 
 export const contatosModel = db.define('pessoas',{
     id:{
